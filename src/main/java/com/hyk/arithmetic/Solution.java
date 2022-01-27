@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 public class Solution {
     /**
+     * NC93 设计LRU缓存结构
      * lru design
      *
      * @param operators int整型二维数组 the ops
@@ -31,6 +32,7 @@ public class Solution {
                 result[i] = get(operator[1]);
                 i++;
             }
+//            check();
         }
         return result;
     }
@@ -40,11 +42,12 @@ public class Solution {
             map.get(key).val = value;
         } else {
             if (map.size() == k) {
-                int rk = tail.prev.key;
+                Node remNode = tail.prev;
+                int rk = remNode.key;
                 tail.prev.prev.next = tail;
                 tail.prev = tail.prev.prev;
-                tail.prev.next = null;
-                tail.prev.prev = null;
+                remNode.next = null;
+                remNode.prev = null;
                 map.remove(rk);
             }
             Node node = new Node(key, value);
@@ -82,6 +85,26 @@ public class Solution {
             this.key = key;
             this.val = val;
         }
+    }
+
+    private void check() {
+        StringBuilder sb = new StringBuilder();
+        Node tempHead = head;
+        while (tempHead != null) {
+            sb.append(tempHead.key).append(" ");
+            tempHead = tempHead.next;
+        }
+        System.out.println(sb.toString());
+    }
+
+    public static void main(String[] args) {
+        int[][] opt = {{1, 1, 1}, {1, 2, 2}, {2, 1}, {1, 3, 3}, {2, 2}, {1, 4, 4}, {2, 1}, {2, 3}, {2, 4}};
+        int[] res = new Solution().LRU(opt, 2);
+        System.out.println(Arrays.toString(res));
+
+        int[][] opt2 = {{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}};
+        int[] res2 = new Solution().LRU(opt2, 3);
+        System.out.println(Arrays.toString(res2));
     }
 }
 
