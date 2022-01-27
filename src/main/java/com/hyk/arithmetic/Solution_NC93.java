@@ -3,7 +3,7 @@ package com.hyk.arithmetic;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class Solution {
+public class Solution_NC93 {
     /**
      * NC93 设计LRU缓存结构
      * lru design
@@ -99,11 +99,11 @@ public class Solution {
 
     public static void main(String[] args) {
         int[][] opt = {{1, 1, 1}, {1, 2, 2}, {2, 1}, {1, 3, 3}, {2, 2}, {1, 4, 4}, {2, 1}, {2, 3}, {2, 4}};
-        int[] res = new Solution().LRU(opt, 2);
+        int[] res = new Solution_NC93().LRU(opt, 2);
         System.out.println(Arrays.toString(res));
 
         int[][] opt2 = {{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}};
-        int[] res2 = new Solution().LRU(opt2, 3);
+        int[] res2 = new Solution_NC93().LRU(opt2, 3);
         System.out.println(Arrays.toString(res2));
     }
 }
