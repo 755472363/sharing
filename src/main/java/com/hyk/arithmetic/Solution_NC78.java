@@ -139,13 +139,3 @@ public class Solution_NC78 {
 }
 
 
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
-
