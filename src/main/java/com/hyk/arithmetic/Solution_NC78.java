@@ -1,5 +1,7 @@
 package com.hyk.arithmetic;
 
+import java.util.Stack;
+
 public class Solution_NC78 {
     /**
      * 给定一个单链表的头结点pHead(该头节点是有值的，比如在下图，它的val是1)，长度为n，反转该链表后，返回新链表的表头。
@@ -16,6 +18,10 @@ public class Solution_NC78 {
      * 输入：{}
      * 返回值：{}
      */
+
+    /**
+     * 一、递归
+     */
     public ListNode ReverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -31,6 +37,9 @@ public class Solution_NC78 {
         return new_head;
     }
 
+    /**
+     * 二、递归
+     */
     public ListNode ReverseList2(ListNode head) {
         return reverseListInt(head, null);
     }
@@ -44,6 +53,9 @@ public class Solution_NC78 {
         return reverseListInt(next, head);
     }
 
+    /**
+     * 三、非递归
+     */
     public ListNode ReverseList3(ListNode head) {
         //新链表
         ListNode newHead = null;
@@ -61,6 +73,29 @@ public class Solution_NC78 {
         return newHead;
     }
 
+    /**
+     * 四、使用栈结构
+     */
+    public ListNode ReverseList4(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        Stack<ListNode> stack = new Stack();
+        while (head != null) {
+            stack.push(head);
+            ListNode temp = head;
+            head = head.next;
+            temp.next = null;
+        }
+        ListNode node = stack.pop();
+        ListNode newHead = node;
+        while (!stack.isEmpty()) {
+            node.next = stack.pop();
+            node = node.next;
+        }
+        return newHead;
+    }
+
     public static void main(String[] args) {
         ListNode headNode = new ListNode(1);
         ListNode curNode = headNode;
@@ -69,10 +104,10 @@ public class Solution_NC78 {
             curNode.next = new ListNode(i + 1);
             curNode = curNode.next;
         }
-        check(headNode);
-        ListNode resNode1 = new Solution_NC78().ReverseList(headNode);
-        check(resNode1);
-        check(headNode);
+//        check(headNode);
+//        ListNode resNode1 = new Solution_NC78().ReverseList(headNode);
+//        check(resNode1);
+//        check(headNode);
 
 //        check(headNode);
 //        ListNode resNode2 = new Solution_NC78().ReverseList2(headNode);
@@ -84,6 +119,11 @@ public class Solution_NC78 {
 //        ListNode resNode3 = new Solution_NC78().ReverseList3(headNode);
 //        check(resNode3);
 //        check(headNode);
+
+        check(headNode);
+        ListNode resNode4 = new Solution_NC78().ReverseList4(headNode);
+        check(resNode4);
+        check(headNode);
     }
 
     private static void check(ListNode head) {
