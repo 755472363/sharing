@@ -3,9 +3,11 @@ package com.hyk.arithmetic;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * NC93 设计LRU缓存结构
+ */
 public class Solution_NC93 {
     /**
-     * NC93 设计LRU缓存结构
      * lru design
      *
      * @param operators int整型二维数组 the ops

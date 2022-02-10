@@ -3,6 +3,9 @@ package com.hyk.arithmetic;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * NC4 判断链表中是否有环
+ */
 public class Solution_NC4 {
     /**
      判断给定的链表中是否有环。如果有环则返回true，否则返回false。
