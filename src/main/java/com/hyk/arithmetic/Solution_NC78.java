@@ -99,6 +99,28 @@ public class Solution_NC78 {
         return newHead;
     }
 
+    /**
+     * 一次遍历, 参考：NC21，链表内指定区间反转
+     */
+    public ListNode ReverseList5(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+
+        ListNode pre = dummyNode;
+        ListNode cur = pre.next;
+        ListNode cur_next;
+        while (cur.next != null) {
+            cur_next = cur.next;
+            cur.next = cur_next.next;
+            cur_next.next = pre.next;
+            pre.next = cur_next;
+        }
+        return dummyNode.next;
+    }
+
     public static void main(String[] args) {
         ListNode headNode = new ListNode(1);
         ListNode curNode = headNode;
@@ -123,9 +145,14 @@ public class Solution_NC78 {
 //        check(resNode3);
 //        check(headNode);
 
+//        check(headNode);
+//        ListNode resNode4 = new Solution_NC78().ReverseList4(headNode);
+//        check(resNode4);
+//        check(headNode);
+
         check(headNode);
-        ListNode resNode4 = new Solution_NC78().ReverseList4(headNode);
-        check(resNode4);
+        ListNode resNode5 = new Solution_NC78().ReverseList5(headNode);
+        check(resNode5);
         check(headNode);
     }
 
