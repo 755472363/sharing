@@ -21,15 +21,39 @@ public class Solution_NC21 {
      * 返回值：{5}
      */
 
+    /**
+     * 一次遍历
+     */
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+        ListNode pre = dummyNode;
+        for (int i = 0; i < m - 1; i++) {
+            pre = pre.next;
+        }
+        ListNode cur = pre.next;
+        ListNode cur_next;
+        for (int i = m; i < n; i++) {
+            cur_next = cur.next;
+            cur.next = cur_next.next;
+            cur_next.next = pre.next;
+            pre.next = cur_next;
+        }
+        return dummyNode.next;
+    }
 
     public static void main(String[] args) {
         ListNode headNode = new ListNode(1);
         ListNode curNode = headNode;
 
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 6; i++) {
             curNode.next = new ListNode(i + 1);
             curNode = curNode.next;
         }
+        check(headNode);
+        ListNode listNode = new Solution_NC21().reverseBetween(headNode, 2, 5);
+        check(listNode);
+
     }
 
     private static void check(ListNode head) {
