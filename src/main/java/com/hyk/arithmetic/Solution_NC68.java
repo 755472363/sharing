@@ -81,9 +81,11 @@ public class Solution_NC68 {
      * c1 = c0 + a   (b = a  a = c0    c1 = a + b)
      * c2 = c1 + c0  (b = c0 a = c1    c2 = a + b)
      * c3 = c2 + c1
+     * <p>
+     * 大于2阶台阶，c可以等于0 ； 这里c=1 ，考虑的是，当只有1个台阶当时候
      */
     public int jumpFloor3(int target) {
-        int a = 1, b = 1, c = 0;
+        int a = 1, b = 1, c = 1;
         for (int i = 2; i <= target; i++) {
             c = a + b;
             b = a;
