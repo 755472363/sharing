@@ -1,4 +1,4 @@
-package com.hyk.sharing;
+package com.hyk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
