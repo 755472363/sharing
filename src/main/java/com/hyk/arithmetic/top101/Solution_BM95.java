@@ -3,7 +3,7 @@ package com.hyk.arithmetic.top101;
 import java.util.Arrays;
 
 /**
- * BM96 分糖果问题
+ * BM95 分糖果问题
  */
 public class Solution_BM95 {
     /**
