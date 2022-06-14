@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * NC4 判断链表中是否有环
  */
-public class Solution_NC4 {
+public class Solution_NC4_判断链表中是否有环 {
     /**
      判断给定的链表中是否有环。如果有环则返回true，否则返回false。
      *
@@ -63,7 +63,7 @@ public class Solution_NC4 {
 
 //        check(headNode);
 //        System.out.println("hasCycle1(headNode) = " + new Solution_NC4().hasCycle1(headNode));
-        System.out.println("hasCycle2(headNode) = " + new Solution_NC4().hasCycle2(headNode));
+        System.out.println("hasCycle2(headNode) = " + new Solution_NC4_判断链表中是否有环().hasCycle2(headNode));
 //        check(headNode);
     }
 

@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * NC93 设计LRU缓存结构
  */
-public class Solution_NC93 {
+public class Solution_NC93_设计LRU缓存结构 {
     /**
      * lru design
      *
@@ -101,11 +101,11 @@ public class Solution_NC93 {
 
     public static void main(String[] args) {
         int[][] opt = {{1, 1, 1}, {1, 2, 2}, {2, 1}, {1, 3, 3}, {2, 2}, {1, 4, 4}, {2, 1}, {2, 3}, {2, 4}};
-        int[] res = new Solution_NC93().LRU(opt, 2);
+        int[] res = new Solution_NC93_设计LRU缓存结构().LRU(opt, 2);
         System.out.println(Arrays.toString(res));
 
         int[][] opt2 = {{1, 1, 1}, {1, 2, 2}, {1, 3, 2}, {2, 1}, {1, 4, 4}, {2, 2}};
-        int[] res2 = new Solution_NC93().LRU(opt2, 3);
+        int[] res2 = new Solution_NC93_设计LRU缓存结构().LRU(opt2, 3);
         System.out.println(Arrays.toString(res2));
     }
 }

@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * BM96 主持人调度（二）
  */
-public class Solution_BM96 {
+public class Solution_BM96_主持人调度 {
     /**
      * 描述
      * 有 n 个活动即将举办，每个活动都有开始时间与活动的结束时间，第 i 个活动的开始时间是 starti ,
@@ -80,7 +80,7 @@ public class Solution_BM96 {
      */
     public static void main(String[] args) {
         int[][] startEnd = {{1, 10}, {1, 3}, {4, 6}, {4, 6}, {7, 9}};
-        int count = new Solution_BM96().minmumNumberOfHost(startEnd.length, startEnd);
+        int count = new Solution_BM96_主持人调度().minmumNumberOfHost(startEnd.length, startEnd);
         System.out.println("count = " + count);
     }
 

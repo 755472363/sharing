@@ -6,7 +6,7 @@ import com.hyk.arithmetic.ListNode;
 /**
  * BM4 合并两个排序的链表
  */
-public class Solution_BM4 {
+public class Solution_BM4_合并两个排序的链表 {
     /**
      * 输入两个递增的链表，单个链表的长度为n，合并这两个链表并使新链表中的节点仍然是递增排序的。
      * 数据范围： 0 \le n \le 10000≤n≤1000，-1000 \le 节点值 \le 1000−1000≤节点值≤1000
@@ -103,7 +103,7 @@ public class Solution_BM4 {
             }
         }
 //        check(new Solution_BM4().Merge(headNode1, headNode1));
-        check(new Solution_BM4().Merge(headNode1, headNode2));
+        check(new Solution_BM4_合并两个排序的链表().Merge(headNode1, headNode2));
     }
 
     private static void check(ListNode head) {

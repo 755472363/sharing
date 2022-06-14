@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * NC45 实现二叉树先序，中序和后序遍历
  */
-public class Solution_NC45 {
+public class Solution_NC45_二叉树先序_中序_后序遍历 {
     /**
      * 数据范围：0 \le n \le 10000≤n≤1000，树上每个节点的val值满足 0 \le val \le 1000≤val≤100
      * 要求：空间复杂度 O(n)O(n)，时间复杂度 O(n)O(n)
@@ -90,7 +90,7 @@ public class Solution_NC45 {
         root3.right = root7;
 
 
-        Solution_NC45 nc68 = new Solution_NC45();
+        Solution_NC45_二叉树先序_中序_后序遍历 nc68 = new Solution_NC45_二叉树先序_中序_后序遍历();
         int[][] result = nc68.threeOrders(root);
         for (int[] ints : result) {
             System.out.println("====" + Arrays.toString(ints));

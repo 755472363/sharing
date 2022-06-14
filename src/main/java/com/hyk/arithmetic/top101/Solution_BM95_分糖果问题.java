@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * BM95 分糖果问题
  */
-public class Solution_BM95 {
+public class Solution_BM95_分糖果问题 {
     /**
      * 一群孩子做游戏，现在请你根据游戏得分来发糖果，要求如下：
      * 1. 每个孩子不管得分多少，起码分到一个糖果。
@@ -70,12 +70,12 @@ public class Solution_BM95 {
     public static void main(String[] args) {
         int[] arr = {8, 9, 2, 3, 4, 7, 3, 1, 8};
         System.out.println("得分 = " + Arrays.toString(arr));
-        int candyCount = new Solution_BM95().candy(arr);
+        int candyCount = new Solution_BM95_分糖果问题().candy(arr);
         System.out.println("candyCount = " + candyCount);
 
         int[] arr2 = {10, 4, 10, 10, 4};
         System.out.println("得分 = " + Arrays.toString(arr2));
-        int candyCount2 = new Solution_BM95().candy(arr2);
+        int candyCount2 = new Solution_BM95_分糖果问题().candy(arr2);
         System.out.println("candyCount2 = " + candyCount2);
     }
 

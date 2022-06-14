@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * NC76 用两个栈实现队列
  */
-public class Solution_NC76 {
+public class Solution_NC76_用两个栈实现队列 {
     /**
      * 描述
      * 用两个栈来实现一个队列，使用n个元素来完成 n 次在队列尾部插入整数(push)和n次在队列头部删除整数(pop)的功能。
@@ -44,7 +44,7 @@ public class Solution_NC76 {
     }
 
     public static void main(String[] args) {
-        Solution_NC76 nc76 = new Solution_NC76();
+        Solution_NC76_用两个栈实现队列 nc76 = new Solution_NC76_用两个栈实现队列();
 
         nc76.push(1);
         nc76.push(2);

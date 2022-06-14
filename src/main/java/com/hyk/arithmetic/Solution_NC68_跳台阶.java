@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * NC68 跳台阶
  */
-public class Solution_NC68 {
+public class Solution_NC68_跳台阶 {
     /**
      * 描述
      * 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个 n 级的台阶总共有多少种跳法（先后次序不同算不同的结果）。
@@ -103,7 +103,7 @@ public class Solution_NC68 {
     }
 
     public static void main(String[] args) {
-        Solution_NC68 nc68 = new Solution_NC68();
+        Solution_NC68_跳台阶 nc68 = new Solution_NC68_跳台阶();
         System.out.println("====" + nc68.jumpFloor(7));
         System.out.println("====" + nc68.jumpFloor2(7));
         System.out.println("====" + nc68.jumpFloor3(7));

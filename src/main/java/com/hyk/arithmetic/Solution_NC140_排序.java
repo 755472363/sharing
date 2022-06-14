@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * NC140 排序
  */
-public class Solution_NC140 {
+public class Solution_NC140_排序 {
     /**
      * 给定一个长度为 n 的数组，请你编写一个函数，返回该数组按升序排序后的结果。
      * 数据范围： 0 \le n \le 1\times10^30≤n≤1×10 3
@@ -59,8 +59,8 @@ public class Solution_NC140 {
     public static void main(String[] args) {
         int[] arr1 = {5, 2, 3, 1, 4};
         int[] arr2 = {5, 1, 6, 2, 5};
-        System.out.println("arr1 = " + Arrays.toString(new Solution_NC140().MySort(arr1)));
-        System.out.println("arr2 = " + Arrays.toString(new Solution_NC140().MySort(arr2)));
+        System.out.println("arr1 = " + Arrays.toString(new Solution_NC140_排序().MySort(arr1)));
+        System.out.println("arr2 = " + Arrays.toString(new Solution_NC140_排序().MySort(arr2)));
     }
 
 }
