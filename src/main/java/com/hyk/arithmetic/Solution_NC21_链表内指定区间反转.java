@@ -23,6 +23,7 @@ public class Solution_NC21_链表内指定区间反转 {
 
     /**
      * 一次遍历
+     * 参考BM1,代码注解
      */
     public ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode dummyNode = new ListNode(-1);
@@ -31,13 +32,14 @@ public class Solution_NC21_链表内指定区间反转 {
         for (int i = 0; i < m - 1; i++) {
             pre = pre.next;
         }
+        // cur 相当于oldHead
         ListNode cur = pre.next;
         ListNode cur_next;
         for (int i = m; i < n; i++) {
-            cur_next = cur.next;
-            cur.next = cur_next.next;
-            cur_next.next = pre.next;
-            pre.next = cur_next;
+            cur_next = cur.next; // oldHead.next肯定是cur_next,先记录，cur_next节点(cur_next会作为新cur,cur_next.next会赋值给oldHead)
+            cur.next = cur_next.next;  // cur_next.next节点,复制给oldHead节点
+            cur_next.next = pre.next;  // pre.next之前的当前节点，变为cur_next节点后继节点
+            pre.next = cur_next; //  cur_next，变为当前节点，复制给pre.next
         }
         return dummyNode.next;
     }

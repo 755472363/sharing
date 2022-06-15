@@ -10,7 +10,14 @@ import java.util.Stack;
  */
 public class Solution_BM1_反转链表 {
 
-    // 迭代
+
+    /**
+     * 推荐
+     * 迭代（类似于，循环5次，生成54321的链表）
+     * 1    2   3    4    5
+     * 1作为cur，要指向他的后继，所以要知道反转前的前驱，初始为null
+     * 1作为cur，要向后迭代，要临时记录一下，反转前的后继2
+     */
     public ListNode ReverseList(ListNode head) {
         if (head == null) //处理空链表
             return null;
@@ -59,7 +66,9 @@ public class Solution_BM1_反转链表 {
         return dummy;
     }
 
-    //
+    /**
+     * -1   1    2   3    4    5
+     */
     public ListNode ReverseList4(ListNode head) {
         if (head == null) {
             return null;
@@ -68,13 +77,35 @@ public class Solution_BM1_反转链表 {
         dummyNode.next = head;
 
         ListNode pre = dummyNode;
-        ListNode cur = pre.next;
+        ListNode oldHead = pre.next;
         ListNode cur_next;
-        while (cur.next != null) {
-            cur_next = cur.next;
-            cur.next = cur_next.next;
+        while (oldHead.next != null) {
+            cur_next = oldHead.next;
+            oldHead.next = cur_next.next;
             cur_next.next = pre.next;
             pre.next = cur_next;
+        }
+        return dummyNode.next;
+    }
+
+    /**
+     * 指定区间反转推荐
+     * -1   1    2   3    4    5
+     */
+    public ListNode ReverseList5(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+
+        ListNode oldHead = dummyNode.next;
+        ListNode cur_next;
+        while (oldHead.next != null) {
+            cur_next = oldHead.next; // oldHead.next肯定是cur_next,先记录，cur_next节点(cur_next会作为新cur,cur_next.next会赋值给oldHead)
+            oldHead.next = cur_next.next; // cur_next.next节点,复制给oldHead节点
+            cur_next.next = dummyNode.next; // dummyNode.next之前的当前节点，变为cur_next节点后继节点
+            dummyNode.next = cur_next; //  cur_next，变为当前节点，复制给dummyNode.next
         }
         return dummyNode.next;
     }
@@ -84,7 +115,7 @@ public class Solution_BM1_反转链表 {
         curr.next = new ListNode(2);
         curr.next.next = new ListNode(3);
         check(curr);
-        ListNode newHead = new Solution_BM1_反转链表().ReverseList4(curr);
+        ListNode newHead = new Solution_BM1_反转链表().ReverseList5(curr);
         check(newHead);
     }
 
