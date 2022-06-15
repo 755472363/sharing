@@ -2,7 +2,7 @@ package com.hyk.arithmetic.top101;
 
 import com.hyk.arithmetic.ListNode;
 
-public class Demo {
+public class Demo_循环生成链表 {
 
     public static void main(String[] args) {
         // 循环5次，生成12345链表，生成54321链表
