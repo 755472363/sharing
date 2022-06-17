@@ -14,7 +14,7 @@ public class Solution_BM28_二叉树的最大深度 {
 
     /**
      * 二叉树的最大深度
-     * 深度优先遍历（Depth First Search, 简称 DFS） 与广度优先遍历（Breath First Search）是图论中两种非常重要的算法
+     * 深度优先遍历（Depth First Search, 简称 DFS） 与广度优先遍历（Breadth First Search）是图论中两种非常重要的算法
      * 生产上广泛用于拓扑排序，寻路（走迷宫），搜索引擎，爬虫等，也频繁出现在 leetcode，高频面试题中。
      */
 
