@@ -32,6 +32,7 @@ public class Solution_BM26_求二叉树的层序遍历 {
                 if (popNode.left != null) {
                     queue.offer(popNode.left);
                 }
+                // 这里是if，不是else if
                 if (popNode.right != null) {
                     queue.offer(popNode.right);
                 }
