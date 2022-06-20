@@ -47,6 +47,7 @@ public class TreeNode {
             }
             toString.append(sb);
         }
+        System.out.println(toString.toString());
         return toString.toString();
     }
 }

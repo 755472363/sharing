@@ -53,7 +53,7 @@ public class Solution_BM33_二叉树的镜像 {
             TreeNode temp = pop.left;
             pop.left = pop.right;
             pop.right = temp;
-            System.out.println(pRoot.toString());
+            pRoot.toString();
         }
         return pRoot;
     }
@@ -72,7 +72,7 @@ public class Solution_BM33_二叉树的镜像 {
             TreeNode temp = poll.left;
             poll.left = poll.right;
             poll.right = temp;
-            System.out.println(pRoot.toString());
+            pRoot.toString();
         }
         return pRoot;
     }
@@ -87,7 +87,7 @@ public class Solution_BM33_二叉树的镜像 {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        System.out.println("root.toString() = " + root.toString());
+        root.toString();
         TreeNode Mirror = new Solution_BM33_二叉树的镜像().Mirror2(root);
     }
 
