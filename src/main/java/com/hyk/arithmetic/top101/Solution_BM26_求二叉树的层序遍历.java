@@ -19,7 +19,7 @@ public class Solution_BM26_求二叉树的层序遍历 {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         if (root == null) {
             //   return null; 或 return result; 都可以
-            return null;
+            return result;
         }
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
