@@ -4,7 +4,7 @@ package com.hyk.arithmetic.top101;
 import com.hyk.arithmetic.TreeNode;
 
 /**
- * NC8 二叉树中和为某一值的路径(二)
+ * BM29 二叉树中和为某一值的路径(一)
  */
 public class Solution_BM29_二叉树中和为某一值的路径_1 {
 

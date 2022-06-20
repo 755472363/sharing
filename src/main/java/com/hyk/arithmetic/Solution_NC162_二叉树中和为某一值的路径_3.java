@@ -4,7 +4,7 @@ package com.hyk.arithmetic;
 /**
  * NC162 二叉树中和为某一值的路径(三)
  */
-public class Solution_NC8_二叉树中和为某一值的路径_3 {
+public class Solution_NC162_二叉树中和为某一值的路径_3 {
 
     /**
      * 输入：{1,2,3,4,5,4,3,#,#,-1},6
@@ -47,7 +47,7 @@ public class Solution_NC8_二叉树中和为某一值的路径_3 {
 //        root.right.left = new TreeNode(4);
 //        root.right.right = new TreeNode(4);
 
-        int res = new Solution_NC8_二叉树中和为某一值的路径_3().FindPath(root, 5);
+        int res = new Solution_NC162_二叉树中和为某一值的路径_3().FindPath(root, 5);
         System.out.println("res = " + res);
 
     }

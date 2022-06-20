@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * BM29 二叉树中和为某一值的路径(一)
+ * NC8 二叉树中和为某一值的路径(二)
  */
 public class Solution_NC8_二叉树中和为某一值的路径_2 {
 
