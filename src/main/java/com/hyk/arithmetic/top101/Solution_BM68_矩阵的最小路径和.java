@@ -42,15 +42,19 @@ public class Solution_BM68_矩阵的最小路径和 {
             for (int j = 0; j < n; j++) {
                 if (i == 0) {
                     if (j == 0)
+                        // i=0的，j=0时，特殊处理一下
                         dp[0][j] = matrix[0][0];
                     else
+                        // i=0的情况，j>=1，第一行赋值
                         dp[0][j] = dp[0][j - 1] + matrix[0][j];
                     continue;
                 }
                 if (j == 0) {
+                    // j=0的情况,此时i>=1，第一列赋值
                     dp[i][0] = dp[i - 1][0] + matrix[i][0];
                     continue;
                 }
+                // i>=1,j>=1的情况
                 dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + matrix[i][j];
             }
         }
