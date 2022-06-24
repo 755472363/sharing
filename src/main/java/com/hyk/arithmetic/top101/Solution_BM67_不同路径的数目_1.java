@@ -57,9 +57,9 @@ public class Solution_BM67_不同路径的数目_1 {
     }
 
     public static void main(String[] args) {
-        int s1 = 4;
-        int s2 = 4;
-        int res2 = new Solution_BM67_不同路径的数目_1().uniquePaths(s1, s2);
+        int m = 4;
+        int n = 4;
+        int res2 = new Solution_BM67_不同路径的数目_1().uniquePaths(m, n);
         System.out.println("res2 = " + res2);
     }
 
