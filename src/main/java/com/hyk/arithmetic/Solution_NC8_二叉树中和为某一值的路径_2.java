@@ -38,7 +38,21 @@ public class Solution_NC8_二叉树中和为某一值的路径_2 {
         expectNumber -= root.val;
         if (root.left == null && root.right == null && expectNumber == 0) {
             res.add(new ArrayList<>(path));
+        } else {
+            dfs(root.left, expectNumber);
+            dfs(root.right, expectNumber);
         }
+        path.removeLast();
+    }
+
+    private void dfs2(TreeNode root, int expectNumber) {
+        if (root == null) return;
+        path.add(root.val);
+        expectNumber -= root.val;
+        if (root.left == null && root.right == null && expectNumber == 0) {
+            res.add(new ArrayList<>(path));
+        }
+        // 加不加else都可以，加上效率应该更高，少一次递归
         dfs(root.left, expectNumber);
         dfs(root.right, expectNumber);
         path.removeLast();
