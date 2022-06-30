@@ -57,7 +57,7 @@ public class Solution_NC78_反转链表 {
     }
 
     /**
-     * 三、非递归
+     * 三、非递归（参考com/hyk/arithmetic/top101/Demo_循环生成链表.java  54321(反转列表)）
      */
     public ListNode ReverseList3(ListNode head) {
         //新链表

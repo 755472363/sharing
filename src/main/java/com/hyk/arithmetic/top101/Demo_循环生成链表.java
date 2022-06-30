@@ -7,7 +7,7 @@ public class Demo_循环生成链表 {
     public static void main(String[] args) {
         // 循环5次，生成12345链表，生成54321链表
 
-        // 54321
+        // 54321(反转列表)
         ListNode head1 = null;
         ListNode oldHead = null;
         for (int i = 1; i <= 5; i++) {
