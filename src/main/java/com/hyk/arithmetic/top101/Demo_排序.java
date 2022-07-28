@@ -10,9 +10,13 @@ public class Demo_排序 {
         for (int i = 0; i < 10; i++) {
             arr[i] = new Random().nextInt(10);
         }
+//        System.out.println(Arrays.toString(arr));
+//        int[] res = new Demo_排序().MySort(arr);
+//        System.out.println(Arrays.toString(res));
+
         System.out.println(Arrays.toString(arr));
-        int[] res = new Demo_排序().MySort(arr);
-        System.out.println(Arrays.toString(res));
+        new Demo_排序().quickSort(0, arr.length - 1, arr);
+        System.out.println(Arrays.toString(arr));
     }
 
     /**
@@ -58,5 +62,30 @@ public class Demo_排序 {
         }
     }
 
+    /**
+     * 快速排序
+     */
+    void quickSort(int left, int right, int[] nums) {
+        if (left < right) {
+            int mid = sort(left, right, nums);
+            quickSort(left, mid - 1, nums);
+            quickSort(mid + 1, right, nums);
+        }
+    }
 
+    private int sort(int left, int right, int[] nums) {
+        int temp = nums[left];
+        while (left < right) {
+            while (left < right && nums[right] >= temp) {
+                right--;
+            }
+            nums[left] = nums[right];
+            while (left < right && nums[left] <= temp) {
+                left++;
+            }
+            nums[right] = nums[left];
+        }
+        nums[left] = temp;
+        return left; // 返回枢纽元素最终位置
+    }
 }
