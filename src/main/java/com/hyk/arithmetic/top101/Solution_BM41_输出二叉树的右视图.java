@@ -25,6 +25,8 @@ import java.util.Queue;
 public class Solution_BM41_输出二叉树的右视图 {
 
     /**
+     * 请根据二叉树的前序遍历，中序遍历恢复二叉树，并打印出二叉树的右视图
+     * <p>
      * 方法一：递归建树+层序遍历
      * <p>
      * https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=295&tqId=23282&ru=%2Fpractice%2Fe0cc33a83afe4530bcec46eba3325116&qru=%2Fta%2Fformat-top101%2Fquestion-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3D%25E7%25AE%2597%25E6%25B3%2595%25E7%25AF%2587%26topicId%3D295
