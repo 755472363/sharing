@@ -12,6 +12,10 @@ import java.util.Queue;
 public class Solution_BM31_对称的二叉树 {
 
     /**
+     * 给定一棵二叉树，判断其是否是自身的镜像（即：是否对称）
+     */
+    
+    /**
      * 层序遍历，一个队列（推荐使用）
      */
     boolean isSymmetrical(TreeNode pRoot) {
