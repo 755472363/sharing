@@ -12,6 +12,16 @@ import java.util.Queue;
 public class Solution_BM30_二叉搜索树与双向链表 {
 
     /**
+     * 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。
+     *    10
+     *   6 14
+     * 4 8 12 16
+     * 转换为双向链表
+     * 4 6 8 10 12 14 16
+     */
+
+
+    /**
      * 思路：中序遍历
      */
     private TreeNode pre;
