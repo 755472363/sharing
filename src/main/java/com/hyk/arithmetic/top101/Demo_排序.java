@@ -63,7 +63,7 @@ public class Demo_排序 {
     }
 
     /**
-     * 快速排序
+     * 快速排序 2022-07-28
      */
     void quickSort(int left, int right, int[] nums) {
         if (left < right) {
@@ -75,6 +75,8 @@ public class Demo_排序 {
 
     private int sort(int left, int right, int[] nums) {
         int temp = nums[left];
+        // 把所有大于temp的放到右边，小于temp的放到左边
+        // 没有这行代码，只交换了一次
         while (left < right) {
             while (left < right && nums[right] >= temp) {
                 right--;
@@ -87,5 +89,40 @@ public class Demo_排序 {
         }
         nums[left] = temp;
         return left; // 返回枢纽元素最终位置
+    }
+
+
+    /**
+     * 快速排序 2022-08-30
+     */
+    public int[] MyQuickSortMain2(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
+        return arr;
+    }
+
+    public void quickSort(int[] arr, int left, int right) {
+        if (left < right) {
+            // 不修改左右边界，赋值给新的变量，改变新变量
+            int i = left;
+            int j = right;
+            // 左边第一个元素当作枢纽
+            int temp = arr[i];
+            // 没有这行代码，只交换了一次
+            while (i < j) {
+                // 把所有大于temp的放到右边，小于temp的放到左边
+                //  >=相等的，不需要交换
+                while (i < j && arr[j] >= temp) j--;
+                arr[i] = arr[j];
+                //  <=相等的，不需要交换
+                while (i < j && arr[i] <= temp) i++;
+                arr[j] = arr[i];
+            }
+            // 枢纽元素，放到最终位置
+            arr[i] = temp;
+            // 右子集进行排序
+            quickSort(arr, i + 1, right);
+            // 左子集进行排序
+            quickSort(arr, left, i - 1);
+        }
     }
 }
